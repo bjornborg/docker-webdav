@@ -11,7 +11,9 @@ touch user.passwd
 htdigest user.passwd WebDAV alice
 htdigest user.passwd WebDAV bob
 ```
-and then run the docker service
+Modify the .env file and set the WEBDAVPATH variable to the path where you want to store the webdav files.
+
+Finally run the docker service
 ```
 docker-compose -d up
 ```
