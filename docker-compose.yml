@@ -1,0 +1,13 @@
+version: '3'
+services:
+  webdav:
+    image: bjornborg/webdav
+    restart: always
+    ports:
+      - "443:443"
+    environment:
+      AUTH_TYPE: Digest
+      SSL_CERT= selfsigned
+    volumes:
+      - ${PWD}/user.passwd:/user.passwd
+      - ${WEBDAVPATH}:/var/lib/dav
